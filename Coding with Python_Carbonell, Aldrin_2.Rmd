@@ -1,0 +1,97 @@
+---
+title: "Coding with Python - Extra Credit"
+author: "Aldrin Carbonell"
+date: "February 13, 2019"
+output: html_document
+---
+
+# Coding with Python - Parts 3, 4, and 5
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Sources consulted with:
+
+https://www.datamentor.io/r-programming/
+
+### Task 10 
+```{r}
+x <- sample(1:100, 1)
+x
+
+if (x <= 25) {
+  cat("1st Quartile")
+} else if (x > 25 & x <= 50) {
+  cat("2nd Quartile")
+} else if (x > 50 & x <= 75) {
+  cat("3rd Quartile")
+} else {
+  cat("4th Quartile")
+}
+```
+
+### Task 11
+```{r}
+cities_warning <- c("Washington", "California", "Nevada", "Idaho", "Montana", "Utah", "Colorado", "New Mexico")
+
+for (CITY in cities_warning) {
+    print(paste(sep="", "Warning, residents of ", CITY, ", temperatures will reach sub-zero temperatures today, please stay indoors if possible.")) 
+}
+```
+
+### Task 12
+```{r}
+file_names <- list(0)
+state_names <- list("Washington", "California", "Nevada", "Idaho", "Montana", "Utah", "Colorado", "New Mexico")
+
+for (STATE in state_names) {
+    c(file_names, state_names)
+    print(paste(sep="", "U://Users/Zhang/Geog_458/", STATE, ".shp"))
+}
+```
+
+### Task 13
+```{r}
+COUNT <- 10
+
+while (COUNT >= 0) { 
+    print(paste(sep = "", "T-minus " , COUNT))
+    COUNT = COUNT - 1
+}
+```
+
+### Task 13 pt. 2
+```{r}
+COUNT <- 10
+countdown <- function(COUNT) {
+  while (COUNT >= 0) {
+    print(paste(sep = "", "T-minus " , COUNT))
+    COUNT = COUNT - 1
+  }
+}
+countdown(COUNT)
+```
+
+### Task 14
+```{r}
+num <- readline(prompt="Enter number: ")
+num <- as.integer(num)
+
+quartile_calc <- function(x) {
+  if (num > 25 & num <= 50) {
+    cat("2nd Quartile")
+  } else if (num > 50 & num <= 75) {
+    cat("3rd Quartile")
+  } else if (num > 75 & num <= 100) {
+    cat("4th Quartile")
+  } else {
+    cat("ERROR")
+  }
+}
+
+# quartile_calc(num)
+```
+
+
+
+
+
